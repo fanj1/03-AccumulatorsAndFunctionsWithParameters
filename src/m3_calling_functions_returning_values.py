@@ -170,6 +170,9 @@ def digits_in_cube(n):
       If the integer (n) is 5    (so n cubed is 125),
       this function returns (1 + 2 + 5), which is 8.
     """
+
+    return sum_of_digits(n) ** 3
+
     # ------------------------------------------------------------------
     # DONE: 4. Implement and test this function.
     #   Note that you should write its TEST function first (above).
@@ -223,6 +226,9 @@ def digits_in_power(n, k):
       this function returns 18
       since 12 to the 3rd power is 1728 (whose digits sum to 18).
     """
+
+    return sum_of_digits(n) ** k
+
     # ------------------------------------------------------------------
     # DONE: 6. Implement and test this function.
     #
@@ -248,18 +254,18 @@ def run_test_fancy_sums_of_digits():
     print('Testing the   fancy_sums_of_digits   function:')
     print('--------------------------------------------------')
 
-    expected = sum_of_digits(sum_of_digits(2 ** 100) ** sum_of_digits(2 ** 99))
+    expected = 19084
     answer = fancy_sums_of_digits(2)
     print('Test 1 expected:', expected)
     print('       actual:  ', answer)
 
-    expected = sum_of_digits(sum_of_digits(3 ** 100) ** sum_of_digits(3 ** 99))
+    expected = 30888
     answer = fancy_sums_of_digits(3)
     print('Test 2 expected:', expected)
     print('       actual:  ', answer)
 
-    expected = sum_of_digits(sum_of_digits(5 ** 100) ** sum_of_digits(5 ** 99))
-    answer = fancy_sums_of_digits(5)
+    expected = 91107
+    answer = fancy_sums_of_digits(15)
     print('Test 3 expected:', expected)
     print('       actual:  ', answer)
 
@@ -296,6 +302,11 @@ def fancy_sums_of_digits(n):
             -- the sum of the digits in (X ** Y) is 124309 (trust me!)
             -- so this function returns 124309.
     """
+
+    x = sum_of_digits(n ** 1000)
+    y = sum_of_digits(n ** 999)
+    return sum_of_digits(x ** y)
+
     # ------------------------------------------------------------------
     # DONE: 8. Implement and test this function.
     #
