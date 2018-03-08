@@ -198,5 +198,4 @@ def even_better_draw_circles(n, number_of_circles, color, outline_thickness, spe
     window.close_on_mouse_click()
 
 
-
 main()
