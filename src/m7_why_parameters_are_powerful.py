@@ -123,7 +123,7 @@ def better_draw_circles(n):
     for k in range(30):
         circle = rg.Circle(center, n * k)
         circle.attach_to(window)
-        window.render(0.03)
+        window.render(0.02)
 
     window.close_on_mouse_click()
 
