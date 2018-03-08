@@ -21,7 +21,7 @@ def main():
     run_test_fancy_sums_of_digits()
 
     # ------------------------------------------------------------------
-    # TODO: 9. DO THIS LAST!
+    # DONE: 9. DO THIS LAST!
     #    -- Uncomment the line of code below to run the main function
     #         in m3t_tester.py (do not make changes to it).
     #         It runs OUR tests on your code.
@@ -32,7 +32,7 @@ def main():
     #       ** Ask a TA or your professor for help in that case. **
     # ------------------------------------------------------------------
 
-    # m3t_tester.main()
+    m3t_tester.main()
 
 
 def run_test_sum_of_digits():
@@ -132,7 +132,7 @@ def run_test_digits_in_cube():
     #  Step 3: Figure out the CORRECT (EXPECTED) answer fo
     #   Step 2:  Pick a test case:  a number(s) that you could send as
     #     actual argument(s) to the  digits_in_cube  function.
-    #r your test case.
+    # r your test case.
     #
     #  Step 4: Write code that prints both the EXPECTED answer
     #    and the ACTUAL answer returned when you call the function.
@@ -171,7 +171,7 @@ def digits_in_cube(n):
       this function returns (1 + 2 + 5), which is 8.
     """
 
-    return sum_of_digits(n) ** 3
+    return sum_of_digits(n ** 3)
 
     # ------------------------------------------------------------------
     # DONE: 4. Implement and test this function.
@@ -199,17 +199,17 @@ def run_test_digits_in_power():
     print('Testing the   digits_in_power   function:')
     print('--------------------------------------------------')
 
-    expected = 16
+    expected = 7
     answer = digits_in_power(2, 4)
     print('Test 1 expected:', expected)
     print('       actual:  ', answer)
 
-    expected = 282429536481
+    expected = 90
     answer = digits_in_power(45, 12)
     print('Test 2 expected:', expected)
     print('       actual:  ', answer)
 
-    expected = 64
+    expected = 28
     answer = digits_in_power(11, 6)
     print('Test 3 expected:', expected)
     print('       actual:  ', answer)
@@ -227,7 +227,8 @@ def digits_in_power(n, k):
       since 12 to the 3rd power is 1728 (whose digits sum to 18).
     """
 
-    return sum_of_digits(n) ** k
+    return sum_of_digits(n ** k)
+
 
     # ------------------------------------------------------------------
     # DONE: 6. Implement and test this function.
